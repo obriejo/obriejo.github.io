@@ -1,10 +1,10 @@
-<!DOCTYPE = html>
+<!doctype html > 
 <html lang="en" > 
 <head> 
-<title> How to find location of a user using HTML5 Geolocation? </title> 
+<title> Ping and Calc Test</title> 
 <meta charset="utf-8" > <link href="css/style.css" rel="stylesheet" type="text/css" /> 
 
-<script>   
+<script>     
 
 window.onload = getLocation;      
 
@@ -14,28 +14,50 @@ function getLocation() {
     if( geo ) {    
         geo.getCurrentPosition( displayLocation );       
            } 
-           else  { alert( "Oops, Geolocation API is not supported");        
+           else  { alert( "Oops, AJAX capability is not supported");        
            }     
 }         
 
-/*     This function displays the latitude and longitude when the browser has a location.     */   
+  
 
     function displayLocation( position ) {         
+		
         var latitude = position.coords.latitude;        
         var longitude = position.coords.longitude;            
-        var div = document.getElementById( 'location' );     
-        div.innerHTML = "You are at Latitude: " + latitude + ", Longitude: " + longitude;    
+        var div = document.getElementById( 'location1' );     
+        div.innerHTML = "Calculated value LA:" + latitude + "<br>";    
+        var div = document.getElementById( 'location2' );     
+        div.innerHTML = "Calculated value LO:" + longitude;    
                                 } 
 </script> 
 
 </head> 
 
 <body>     
+
 <div class="container" >        
-<h3> How to find location of a user using HTML5 Geolocation? </h3>              
-<div id="location" >            
-You are at Latitude: _________, Longitude: _________         
-</div>    
-</div> 
+<h3> Ping values: </h3>   
+
+<div id="ping1">  Pinging prod.github.map.fastlylb.net [151.101.20.133] with 32 bytes of data: </div>
+<div id="ping2"> Reply from 151.101.20.133: bytes=32 time=18ms TTL=57</div>
+<div id="ping3"> Reply from 151.101.20.133: bytes=32 time=14ms TTL=57</div>  
+<div id="ping4"> Reply from 151.101.20.133: bytes=32 time=17ms TTL=57</div>  
+<div id="ping5"> Reply from 151.101.20.133: bytes=32 time=14ms TTL=57</div>  
+<div id="ping6"> Ping statistics for 151.101.20.133:</div>  
+<div id="ping7">     Packets: Sent = 27, Received = 27, Lost = 0 (0% loss),</div>  
+<div id="ping8"> Approximate round trip times in milli-seconds:</div>  
+<div id="ping9">     Minimum = 14ms, Maximum = 19ms, Average = 15ms </div>  
+
+<h3> Calculated values: </h3>   
+
+<div id="calc1" > Calculated value TN:27.6265899</div>  
+<div id="location1" > Calculated value LA: </div>      
+<div id="calc2" > Calculated value AX:41.7458123</div>  
+<div id="calc3" > Calculated value TN:27.62658991 </div>    
+<div id="calc4" > Calculated value DMZ:91.7204667 </div>    
+<div id="location2" > Calculated value LO: </div> 
+<div id="calc5" > Calculated value 0F:12.7204 </div>
+    
 </body> 
 </html>
+
